@@ -65,16 +65,6 @@ def home():
 
 df = pd.read_csv(r"Electric_vehicles.tsv", sep=',')
 
-df = df.dropna()
-
-lst_cols_unnec = ['VIN (1-10)', 'Postal Code', 'Legislative District',
-                  'DOL Vehicle ID', 'Electric Utility', '2020 Census Tract']
-
-df.drop(lst_cols_unnec, axis=1, inplace=True)
-
-df.rename({'Model Year': 'Year', 'Make': 'Car_Mark', 'Electric Vehicle Type': 'Type_Vehicle',
-          'Clean Alternative Fuel Vehicle (CAFV) Eligibility': 'CAFV Eligibility'}, axis=1, inplace=True)
-
 # Define a function for arrange the locations of the vehicules
 def get_location_geo(x):
     pos1 = re.findall('-\d{3}.\d+\s\d{2}.\d+', x)
