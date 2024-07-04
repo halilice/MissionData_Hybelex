@@ -25,16 +25,6 @@ def home():
     df = pd.read_csv(r"Electric_vehicles.tsv", sep=',')
     st.write(df.head(50))
 
-    df = df.dropna()
-
-    lst_cols_unnec = ['VIN (1-10)', 'Postal Code', 'Legislative District',
-                  'DOL Vehicle ID', 'Electric Utility', '2020 Census Tract']
-
-    df.drop(lst_cols_unnec, axis=1, inplace=True)
-
-    df.rename({'Model Year': 'Year', 'Make': 'Car_Mark', 'Electric Vehicle Type': 'Type_Vehicle',
-          'Clean Alternative Fuel Vehicle (CAFV) Eligibility': 'CAFV Eligibility'}, axis=1, inplace=True)
-
     st.subheader('Descriptive Statistics of dataset')
     df_desc = df.describe()
     st.write(df_desc)
