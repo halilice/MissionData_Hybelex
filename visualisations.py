@@ -65,16 +65,6 @@ def home():
 
 df = pd.read_csv(r"Electric_vehicles.tsv", sep=',')
 
-# Define a function for arrange the locations of the vehicules
-def get_location_geo(x):
-    pos1 = re.findall('-\d{3}.\d+\s\d{2}.\d+', x)
-    pos1 = ''.join(pos1)
-    pos2 = pos1.split()
-    pos2[0], pos2[1] = pos2[1], pos2[0]
-    pos = [float(i) for i in pos2]
-    return pos
-df['Vehicle Location'] = df['Vehicle Location'].apply(get_location_geo)
-
 def basic_indic():
     st.subheader('Evolution of Electric Car Numbers over Time')
     st.text("""
