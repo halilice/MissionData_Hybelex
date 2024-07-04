@@ -254,7 +254,7 @@ def tesla_map():
     t = folium.Map(location = position_wash, zoom_start=8)
 
     for i in range(len(df_tesla)):
-        folium.Marker(location=df_tesla.iloc[i,10],
+        folium.Marker(location=df_tesla.iloc[i,8],
                 popup=df_tesla.iloc[i,0],
                 icon=folium.Icon(color='green', icon='home', prefix='fa')).add_to(t)
     return st_folium(t, width=1300)
@@ -266,7 +266,7 @@ def nissan_map():
     n = folium.Map(location = position_wash, zoom_start=8)
 
     for i in range(len(df_nissan)):
-        folium.Marker(location=df_nissan.iloc[i,10],
+        folium.Marker(location=df_nissan.iloc[i,8],
                 popup=df_nissan.iloc[i,0],
                 icon=folium.Icon(color='green', icon='home', prefix='fa')).add_to(n)
     return st_folium(n, width=1300)
@@ -278,7 +278,7 @@ def chevrolet_map():
     c = folium.Map(location = position_wash, zoom_start=8)
 
     for i in range(len(df_chev)):
-        folium.Marker(location=df_chev.iloc[i,10],
+        folium.Marker(location=df_chev.iloc[i,8],
                 popup=df_chev.iloc[i,0],
                 icon=folium.Icon(color='green', icon='home', prefix='fa')).add_to(c)
     return st_folium(c, width=1300)
@@ -290,7 +290,7 @@ def ford_map():
     f = folium.Map(location = position_wash, zoom_start=8)
 
     for i in range(len(df_ford)):
-        folium.Marker(location=df_ford.iloc[i,10],
+        folium.Marker(location=df_ford.iloc[i,8],
                 popup=df_ford.iloc[i,0],
                 icon=folium.Icon(color='green', icon='home', prefix='fa')).add_to(f)
     return st_folium(f, width=1300)
