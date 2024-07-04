@@ -22,7 +22,7 @@ warnings.simplefilter(action='ignore', category=FutureWarning)
 def home():
     st.subheader('The first fifty rows of the dataset')
 
-    df = pd.read_csv(r"C:\Users\HALILICELIKEL\Desktop\mission_data\Data_analyst\Electric_Vehicle_Population_Data.csv", sep=',')
+    df = pd.read_csv(r"Electric_vehicles.tsv", sep=',')
     st.write(df.head(50))
 
     df = df.dropna()
@@ -73,7 +73,7 @@ def home():
         We can say that there is not a strong correlation between variables by looking at 
         the table above. We will now look the evolution of electric cars over time.""")
 
-df = pd.read_csv(r"C:\Users\HALILICELIKEL\Desktop\mission_data\Data_analyst\Electric_Vehicle_Population_Data.csv", sep=',')
+df = pd.read_csv(r"Electric_vehicles.tsv", sep=',')
 
 df = df.dropna()
 
