@@ -64,6 +64,13 @@ def home():
         the table above. We will now look the evolution of electric cars over time.""")
 
 df = pd.read_csv(r"Electric_Vehicle_Population_Data_clean.csv")
+def obj_to_lst(x):
+    y = x[1:-1]
+    y = re.sub(',', '', y)
+    y = y.split()
+    return y
+
+df['Vehicle Location'] = df['Vehicle Location'].apply(obj_to_lst)
 
 def basic_indic():
     st.subheader('Evolution of Electric Car Numbers over Time')
