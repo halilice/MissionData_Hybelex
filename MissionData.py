@@ -47,7 +47,7 @@ def main():
 
 
      elif choice == "Geographic Distribution":
-         submenu = ["General Info", "Tesla", "Nissan", "Chevrolet", "Ford"]
+         submenu = ["General Info", "Tesla", "Nissan", "Chevrolet", "Ford", "Kia"]
          choice_sub = st.sidebar.selectbox("Drop down to choose", submenu)
          if choice_sub == "General Info":
               geog_dist()
