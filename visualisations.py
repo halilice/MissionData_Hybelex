@@ -258,7 +258,7 @@ def tesla_map():
     st.subheader('Geographic Distribution of Tesla Electric Cars on Map')
     df_tesla = df[df['Car_Mark'] == 'TESLA'].head(1000)
     position_wash = [47.751076, -120.740135]
-    t = folium.Map(location = position_wash, zoom_start=8)
+    t = folium.Map(location = position_wash, zoom_start=9)
 
     for i in range(len(df_tesla)):
         folium.Marker(location=df_tesla.iloc[i,8],
@@ -270,7 +270,7 @@ def nissan_map():
     st.subheader('Geographic Distribution of Nissan Electric Cars on Map')
     df_nissan = df[df['Car_Mark'] == 'NISSAN'].head(1000)
     position_wash = [47.751076, -120.740135]
-    n = folium.Map(location = position_wash, zoom_start=8)
+    n = folium.Map(location = position_wash, zoom_start=9)
 
     for i in range(len(df_nissan)):
         folium.Marker(location=df_nissan.iloc[i,8],
@@ -282,7 +282,7 @@ def chevrolet_map():
     st.subheader('Geographic Distribution of Chevrolet Electric Cars on Map')
     df_chev = df[df['Car_Mark'] == 'CHEVROLET'].head(1000)
     position_wash = [47.751076, -120.740135]
-    c = folium.Map(location = position_wash, zoom_start=8)
+    c = folium.Map(location = position_wash, zoom_start=9)
 
     for i in range(len(df_chev)):
         folium.Marker(location=df_chev.iloc[i,8],
@@ -294,7 +294,7 @@ def ford_map():
     st.subheader('Geographic Distribution of Ford Electric Cars on Map')
     df_ford = df[df['Car_Mark'] == 'FORD'].head(1000)
     position_wash = [47.751076, -120.740135]
-    f = folium.Map(location = position_wash, zoom_start=8)
+    f = folium.Map(location = position_wash, zoom_start=9)
 
     for i in range(len(df_ford)):
         folium.Marker(location=df_ford.iloc[i,8],
@@ -306,7 +306,7 @@ def kia_map():
     st.subheader('Geographic Distribution of Kia Electric Cars on Map')
     df_kia = df[df['Car_Mark'] == 'KIA'].head(1000)
     position_wash = [47.751076, -120.740135]
-    f = folium.Map(location = position_wash, zoom_start=8)
+    f = folium.Map(location = position_wash, zoom_start=9)
 
     for i in range(len(df_ford)):
         folium.Marker(location=df_ford.iloc[i,8],
