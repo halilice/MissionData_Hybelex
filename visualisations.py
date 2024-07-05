@@ -302,6 +302,18 @@ def ford_map():
                 icon=folium.Icon(color='green', icon='home', prefix='fa')).add_to(f)
     return st_folium(f, width=1300)
 
+def kia_map():
+    st.subheader('Geographic Distribution of Kia Electric Cars on Map')
+    df_kia = df[df['Car_Mark'] == 'KIA'].head(1000)
+    position_wash = [47.751076, -120.740135]
+    f = folium.Map(location = position_wash, zoom_start=8)
+
+    for i in range(len(df_ford)):
+        folium.Marker(location=df_ford.iloc[i,8],
+                popup=df_kia.iloc[i,0],
+                icon=folium.Icon(color='green', icon='home', prefix='fa')).add_to(f)
+    return st_folium(f, width=1300)
+
 def range_veh():
     st.subheader('Analysis of Electric Vehicle Ranges')
 
