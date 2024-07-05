@@ -342,9 +342,9 @@ def range_veh():
     # st.pyplot(fig)
 
     # st.text("""
-        There are more than 100 thousand vehicles that we don't know their ranges.
-        It is too hard to make comment by looking at this graph so that we will 
-        filter the vehicles with missing values and draw a new graph.""")
+        # There are more than 100 thousand vehicles that we don't know their ranges.
+        # It is too hard to make comment by looking at this graph so that we will 
+        # filter the vehicles with missing values and draw a new graph.""")
 
     st.subheader('The distribution of vehicles ranges without missing values')
     df_filter_zero = df[df['Electric Range'] != 0]
