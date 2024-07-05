@@ -308,8 +308,8 @@ def kia_map():
     position_wash = [47.751076, -120.740135]
     f = folium.Map(location = position_wash, zoom_start=9)
 
-    for i in range(len(df_ford)):
-        folium.Marker(location=df_ford.iloc[i,8],
+    for i in range(len(df_kia)):
+        folium.Marker(location=df_kia.iloc[i,8],
                 popup=df_kia.iloc[i,0],
                 icon=folium.Icon(color='green', icon='home', prefix='fa')).add_to(f)
     return st_folium(f, width=1300)
