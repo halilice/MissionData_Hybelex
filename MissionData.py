@@ -50,15 +50,15 @@ def main():
          submenu = ["General Info", "Tesla", "Nissan", "Chevrolet", "Ford"]
          choice_sub = st.sidebar.selectbox("Drop down to choose", submenu)
          if choice_sub == "General Info":
-             geog_dist()
+              geog_dist()
          elif choice_sub == "Tesla":
-             tesla_map()
+              tesla_map()
          elif choice_sub == "Nissan":
-             nissan_map()
+              nissan_map()
          elif choice_sub == "Chevrolet":
-             chevrolet_map()
+              chevrolet_map()
          elif choice_sub == "Ford":
-             ford_map()
+              ford_map()
          else:
               kia_map()
 
