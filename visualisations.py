@@ -257,7 +257,7 @@ def geog_dist():
 def tesla_map():
     st.subheader('Geographic Distribution of Tesla Electric Cars on Map')
     df_tesla = df[df['Car_Mark'] == 'TESLA'].head(1000)
-    position_wash = [47.753996984, -118.703830518]
+    position_wash = [47.650664064, -118.150999396]
     t = folium.Map(location = position_wash, zoom_start=7)
 
     for i in range(len(df_tesla)):
