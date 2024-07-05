@@ -333,15 +333,15 @@ def range_veh():
         We see that almost three fourths of the 'Electric range' values are
         zero.""")
 
-    st.subheader('Distribution of vehicles ranges')
-    st.write('\nAverage range of electtric vehicles is: ', df['Electric Range'].mean(), 'miles\n')
-    fig, ax = plt.subplots(figsize=(10,7))
-    sns.histplot(data=df, x='Electric Range')
-    plt.axvline(df['Electric Range'].mean(), color='r',  linestyle='dashed',linewidth=1)
-    plt.title("Distribution of Electic Vehicles' Ranges", pad=15, loc='left', fontsize=15)
-    st.pyplot(fig)
+    # st.subheader('Distribution of vehicles ranges')
+    # st.write('\nAverage range of electtric vehicles is: ', df['Electric Range'].mean(), 'miles\n')
+    # fig, ax = plt.subplots(figsize=(10,7))
+    # sns.histplot(data=df, x='Electric Range')
+    # plt.axvline(df['Electric Range'].mean(), color='r',  linestyle='dashed',linewidth=1)
+    # plt.title("Distribution of Electic Vehicles' Ranges", pad=15, loc='left', fontsize=15)
+    # st.pyplot(fig)
 
-    st.text("""
+    # st.text("""
         There are more than 100 thousand vehicles that we don't know their ranges.
         It is too hard to make comment by looking at this graph so that we will 
         filter the vehicles with missing values and draw a new graph.""")
