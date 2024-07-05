@@ -79,9 +79,19 @@ def basic_indic():
         evolution of electric car registrations in Washington State over time. This 
         will give us a good idea about the progress of electic vehicles.""")
     number_by_year = df.groupby('Year').agg(**{'Frequency': ('Car_Mark', lambda x: x.count())}).reset_index()
-    evol_num_veh = sns.lineplot(data=number_by_year, x='Year', y='Frequency')
-    plt.title('Evolution of Electric Car Numbers over Time', pad=15, fontsize=15, loc='left')
-    st.pyplot(evol_num_veh.figure)
+    fig = px.line(
+    number_by_year,
+    x="Year",
+    y="Frequency",
+    title="Evolution of Electric Car Numbers over Time",
+    height=600
+    )
+
+    fig.update_layout(
+        margin=dict(l=20, r=20, t=50, b=20),
+        paper_bgcolor="LightGreen",
+    )
+    st.plotly_chart(fig)
     st.text("""
         We can intrepret that the number of registration of electric cars until 2010 
         follows a steady trend. After that year, it begins to increase little by little 
@@ -321,11 +331,21 @@ def range_veh():
         First of all i will plot a time series graphic in order to visualise the 
         evolution of the ranges of electric vehicles over time. For this, i will
         insert the years on x axis and the electric range on y axis.""")
-    fig, ax = plt.subplots(figsize=(10,7))
-    sns.lineplot(data=df, x='Year', y='Electric Range')
-    plt.title('Evolution of Electric Car Range over Time', pad=15, loc='left', fontsize=15)
-    plt.ylabel('Range(km)')
-    st.pyplot(fig)
+    average_range = df.groupby('Year').agg(**{'Average Range': ('Electric Range', lambda x: x.mean())}).reset_index()
+    fig = px.line(
+        average_range,
+        x="Year",
+        y="Average Range",
+        title="Evolution of Electric Car Range over Time",
+        height=600
+    )
+
+    fig.update_layout(
+        margin=dict(l=20, r=20, t=50, b=20),
+        paper_bgcolor="LightGreen",
+    )
+
+    st.plotly_chart(fig)
 
     st.text("""
         We can clearly see from the graphic that the range of electric cars had
