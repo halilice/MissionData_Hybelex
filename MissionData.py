@@ -2,7 +2,7 @@
 import streamlit as st
 
 # Importing the module
-from visualisations import home, basic_indic, geog_dist, range_veh, tesla_map, nissan_map, chevrolet_map, ford_map
+from visualisations import home, basic_indic, geog_dist, range_veh, tesla_map, nissan_map, chevrolet_map, ford_map, kia_map
 
 page_bg_img = f"""
 <style>
@@ -57,8 +57,10 @@ def main():
              nissan_map()
          elif choice_sub == "Chevrolet":
              chevrolet_map()
-         else:
+         elif choice_sub == "Ford":
              ford_map()
+         else:
+              kia_map()
 
      else:
           range_veh()
